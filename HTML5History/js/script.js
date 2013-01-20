@@ -1,11 +1,22 @@
-
+/**
+* HTML5 History Demo
+* @author Khaled Garbaya (http://khaledgarbaya.net)
+* this example code is opensrouce , you may use it in your project 
+* and change it if you want
+**/
 (function(){
-var s,
+
+var s,//setting global
+	//HistoryDemo Object
  	HistoryDemo = {
+ 		//settings for the specific example
 		settings:{
-			hrefs:document.getElementsByClassName('nav-item'),
-			version:"0.1"
+			hrefs:document.getElementsByClassName('nav-item'),// a tag 
+			version:"0.1"//version
 		},
+		//init the script
+		//attach click events to the nav items
+		//catch the windows popstate event ( when the user clicks prev or next button on the browser)
 		init:function(){			
 			s = HistoryDemo.settings;
 			for (var i = 0; i < s.hrefs.length; i++) {
@@ -17,6 +28,7 @@ var s,
 			    return false;
 			});
 		},
+		//attach click events to the nav items
 		initClickListener:function(linkTag){
 			console.log(linkTag.href);
 			linkTag.onclick = function(e) {
@@ -31,6 +43,7 @@ var s,
 			    return false;
 			};
 		},
+		//load the requested page and display it
 		swapPage:function(href){
 			var req = new XMLHttpRequest();
 			req.open("GET",
@@ -47,6 +60,7 @@ var s,
 			  return false;
 			}
 	};
+	// expose HistoryDemo to the global scope
 	window.HistoryDemo = HistoryDemo;
 })();
 window.onload = function(){
