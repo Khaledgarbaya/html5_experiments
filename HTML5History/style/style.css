@@ -1,0 +1,40 @@
+body{
+	font-family: Helvetica, Arial, sans-serif;
+}
+#wrapper
+{
+	width:600px;
+	margin: 0 auto;
+}
+nav
+{
+	width: 520px;
+	margin:0 auto;
+}
+ul
+{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+li
+{
+	float:left;
+}
+a:link,a:visited
+{
+	display:block;
+	width:120px;
+	font-weight:bold;
+	color:#BADA55;
+	background-color:#666666;
+	text-align:center;
+	padding:4px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+a:hover,a:active
+{
+	background-color:#FFFFFF;
+}
